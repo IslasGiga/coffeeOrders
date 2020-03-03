@@ -17,6 +17,7 @@
 		861C0022240EE77D004A4F31 /* NewOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C0021240EE77D004A4F31 /* NewOrderView.swift */; };
 		861C0025240EEF61004A4F31 /* SnapKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 861C0024240EEF61004A4F31 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		861C0027240EF423004A4F31 /* NewOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C0026240EF423004A4F31 /* NewOrderCell.swift */; };
+		861C0029240EFA55004A4F31 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C0028240EFA55004A4F31 /* WebService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,6 +46,7 @@
 		861C0021240EE77D004A4F31 /* NewOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrderView.swift; sourceTree = "<group>"; };
 		861C0024240EEF61004A4F31 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		861C0026240EF423004A4F31 /* NewOrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrderCell.swift; sourceTree = "<group>"; };
+		861C0028240EFA55004A4F31 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				861C000C240ED7BF004A4F31 /* Assets.xcassets */,
 				861C000E240ED7BF004A4F31 /* LaunchScreen.storyboard */,
 				861C0011240ED7BF004A4F31 /* Info.plist */,
+				861C0028240EFA55004A4F31 /* WebService.swift */,
 			);
 			path = Orders;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			files = (
 				861C001A240EE213004A4F31 /* NewOrderViewController.swift in Sources */,
 				861C0027240EF423004A4F31 /* NewOrderCell.swift in Sources */,
+				861C0029240EFA55004A4F31 /* WebService.swift in Sources */,
 				861C0006240ED7BD004A4F31 /* AppDelegate.swift in Sources */,
 				861C0022240EE77D004A4F31 /* NewOrderView.swift in Sources */,
 				861C0018240ED850004A4F31 /* HomeViewController.swift in Sources */,
