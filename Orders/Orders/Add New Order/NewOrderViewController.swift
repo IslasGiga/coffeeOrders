@@ -20,6 +20,7 @@ class NewOrderViewController: UIViewController {
         view.tableView.delegate = self
         view.tableView.dataSource = self
         view.tableView.isScrollEnabled = false
+        view.nameTextField.delegate = self
         return view
     }()
     
@@ -32,16 +33,27 @@ class NewOrderViewController: UIViewController {
         super.viewDidLoad()
         title = "Add new order"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(save))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(save))
     }
 }
 
 extension NewOrderViewController{
     @objc func save(){
         print("Save")
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func cancel(){
+        print("Cancel")
+        navigationController?.popViewController(animated: true)
     }
 }
 
 extension NewOrderViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.accessoryType = .checkmark
+    }
     
 }
 
@@ -51,10 +63,17 @@ extension NewOrderViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell =  UITableViewCell()
+        let cell =  NewOrderCell()
         cell.textLabel?.text = coffeeType[indexPath.row]
         return cell
     }
+}
+
+extension NewOrderViewController: UITextFieldDelegate{
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     
 }

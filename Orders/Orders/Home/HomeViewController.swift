@@ -29,12 +29,11 @@ class HomeViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(goToAddNewOrder))
         title = "Orders"
     }
-    
 }
 
 extension HomeViewController{
     @objc func goToAddNewOrder(){
-        print("GoToAddNewOrder")
+        navigationController?.pushViewController(NewOrderViewController(), animated: true)
     }
 }
 

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class NewOrderView: UIView {
 
@@ -22,6 +23,7 @@ class NewOrderView: UIView {
     
     let nameTextField: UITextField = {
         let textField = UITextField()
+        textField.borderStyle = .none
         textField.placeholder = "Nome"
         return textField
     }()
@@ -40,6 +42,7 @@ class NewOrderView: UIView {
     }
     
     func initialize(){
+        backgroundColor = .white
         addSubview(tableView)
         addSubview(segmentedControl)
         addSubview(nameTextField)
@@ -50,18 +53,20 @@ class NewOrderView: UIView {
             $0.top.equalToSuperview()
             $0.left.equalToSuperview()
             $0.right.equalToSuperview()
+            $0.height.equalTo(250)
         })
         
         segmentedControl.snp.makeConstraints({
             $0.top.equalTo(tableView.snp.bottom).offset(16)
-            $0.left.equalTo(tableView.snp.bottom).offset(16)
-            $0.right.equalTo(tableView.snp.bottom).inset(16)
+            $0.left.equalToSuperview().offset(16)
+            $0.right.equalToSuperview().inset(16)
         })
         
         nameTextField.snp.makeConstraints({
             $0.top.equalTo(segmentedControl.snp.bottom).offset(16)
-            $0.left.equalTo(segmentedControl.snp.bottom).offset(16)
-            $0.right.equalTo(segmentedControl.snp.bottom).inset(16)
+            $0.left.equalToSuperview().offset(16)
+            $0.right.equalToSuperview().inset(16)
+            $0.height.equalTo(26)
         })
     }
 }

@@ -15,7 +15,22 @@
 		861C001A240EE213004A4F31 /* NewOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C0019240EE213004A4F31 /* NewOrderViewController.swift */; };
 		861C001D240EE4F1004A4F31 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 861C001C240EE4F1004A4F31 /* SnapKit.framework */; };
 		861C0022240EE77D004A4F31 /* NewOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C0021240EE77D004A4F31 /* NewOrderView.swift */; };
+		861C0025240EEF61004A4F31 /* SnapKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 861C0024240EEF61004A4F31 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		861C0027240EF423004A4F31 /* NewOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C0026240EF423004A4F31 /* NewOrderCell.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		861C0023240EEF33004A4F31 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				861C0025240EEF61004A4F31 /* SnapKit.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		861C0002240ED7BD004A4F31 /* Orders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orders.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,6 +43,8 @@
 		861C0019240EE213004A4F31 /* NewOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrderViewController.swift; sourceTree = "<group>"; };
 		861C001C240EE4F1004A4F31 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		861C0021240EE77D004A4F31 /* NewOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrderView.swift; sourceTree = "<group>"; };
+		861C0024240EEF61004A4F31 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		861C0026240EF423004A4F31 /* NewOrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrderCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				861C0019240EE213004A4F31 /* NewOrderViewController.swift */,
+				861C0026240EF423004A4F31 /* NewOrderCell.swift */,
 				861C0021240EE77D004A4F31 /* NewOrderView.swift */,
 			);
 			path = "Add New Order";
@@ -92,6 +110,7 @@
 		861CFFF9240ED7BD004A4F31 = {
 			isa = PBXGroup;
 			children = (
+				861C0024240EEF61004A4F31 /* SnapKit.framework */,
 				861C0004240ED7BD004A4F31 /* Orders */,
 				861C0003240ED7BD004A4F31 /* Products */,
 				861C001B240EE4F1004A4F31 /* Frameworks */,
@@ -109,6 +128,7 @@
 				861CFFFF240ED7BD004A4F31 /* Frameworks */,
 				861C0000240ED7BD004A4F31 /* Resources */,
 				861C001E240EE5E7004A4F31 /* ShellScript */,
+				861C0023240EEF33004A4F31 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -194,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				861C001A240EE213004A4F31 /* NewOrderViewController.swift in Sources */,
+				861C0027240EF423004A4F31 /* NewOrderCell.swift in Sources */,
 				861C0006240ED7BD004A4F31 /* AppDelegate.swift in Sources */,
 				861C0022240EE77D004A4F31 /* NewOrderView.swift in Sources */,
 				861C0018240ED850004A4F31 /* HomeViewController.swift in Sources */,
