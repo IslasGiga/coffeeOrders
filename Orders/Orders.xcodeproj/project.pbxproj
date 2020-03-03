@@ -12,6 +12,9 @@
 		861C000D240ED7BF004A4F31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 861C000C240ED7BF004A4F31 /* Assets.xcassets */; };
 		861C0010240ED7BF004A4F31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 861C000E240ED7BF004A4F31 /* LaunchScreen.storyboard */; };
 		861C0018240ED850004A4F31 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C0017240ED850004A4F31 /* HomeViewController.swift */; };
+		861C001A240EE213004A4F31 /* NewOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C0019240EE213004A4F31 /* NewOrderViewController.swift */; };
+		861C001D240EE4F1004A4F31 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 861C001C240EE4F1004A4F31 /* SnapKit.framework */; };
+		861C0022240EE77D004A4F31 /* NewOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C0021240EE77D004A4F31 /* NewOrderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		861C000F240ED7BF004A4F31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		861C0011240ED7BF004A4F31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		861C0017240ED850004A4F31 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		861C0019240EE213004A4F31 /* NewOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrderViewController.swift; sourceTree = "<group>"; };
+		861C001C240EE4F1004A4F31 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		861C0021240EE77D004A4F31 /* NewOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				861C001D240EE4F1004A4F31 /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,8 +53,9 @@
 		861C0004240ED7BD004A4F31 /* Orders */ = {
 			isa = PBXGroup;
 			children = (
+				861C0020240EE74D004A4F31 /* Add New Order */,
+				861C001F240EE747004A4F31 /* Home */,
 				861C0005240ED7BD004A4F31 /* AppDelegate.swift */,
-				861C0017240ED850004A4F31 /* HomeViewController.swift */,
 				861C0009240ED7BD004A4F31 /* Main.storyboard */,
 				861C000C240ED7BF004A4F31 /* Assets.xcassets */,
 				861C000E240ED7BF004A4F31 /* LaunchScreen.storyboard */,
@@ -56,11 +64,37 @@
 			path = Orders;
 			sourceTree = "<group>";
 		};
+		861C001B240EE4F1004A4F31 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				861C001C240EE4F1004A4F31 /* SnapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		861C001F240EE747004A4F31 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				861C0017240ED850004A4F31 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		861C0020240EE74D004A4F31 /* Add New Order */ = {
+			isa = PBXGroup;
+			children = (
+				861C0019240EE213004A4F31 /* NewOrderViewController.swift */,
+				861C0021240EE77D004A4F31 /* NewOrderView.swift */,
+			);
+			path = "Add New Order";
+			sourceTree = "<group>";
+		};
 		861CFFF9240ED7BD004A4F31 = {
 			isa = PBXGroup;
 			children = (
 				861C0004240ED7BD004A4F31 /* Orders */,
 				861C0003240ED7BD004A4F31 /* Products */,
+				861C001B240EE4F1004A4F31 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +108,7 @@
 				861CFFFE240ED7BD004A4F31 /* Sources */,
 				861CFFFF240ED7BD004A4F31 /* Frameworks */,
 				861C0000240ED7BD004A4F31 /* Resources */,
+				861C001E240EE5E7004A4F31 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -130,12 +165,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		861C001E240EE5E7004A4F31 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = "/usr/local/bin/carthage copy-framework";
+			shellScript = "
+
+";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		861CFFFE240ED7BD004A4F31 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				861C001A240EE213004A4F31 /* NewOrderViewController.swift in Sources */,
 				861C0006240ED7BD004A4F31 /* AppDelegate.swift in Sources */,
+				861C0022240EE77D004A4F31 /* NewOrderView.swift in Sources */,
 				861C0018240ED850004A4F31 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +344,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J6M7ZAPTF5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Orders/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,6 +366,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J6M7ZAPTF5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Orders/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
