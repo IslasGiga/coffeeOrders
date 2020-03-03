@@ -18,6 +18,7 @@
 		861C0025240EEF61004A4F31 /* SnapKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 861C0024240EEF61004A4F31 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		861C0027240EF423004A4F31 /* NewOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C0026240EF423004A4F31 /* NewOrderCell.swift */; };
 		861C0029240EFA55004A4F31 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C0028240EFA55004A4F31 /* WebService.swift */; };
+		861C002E240F0188004A4F31 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861C002D240F0188004A4F31 /* Order.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,6 +48,7 @@
 		861C0024240EEF61004A4F31 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		861C0026240EF423004A4F31 /* NewOrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrderCell.swift; sourceTree = "<group>"; };
 		861C0028240EFA55004A4F31 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		861C002D240F0188004A4F31 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,14 +74,14 @@
 		861C0004240ED7BD004A4F31 /* Orders */ = {
 			isa = PBXGroup;
 			children = (
-				861C0020240EE74D004A4F31 /* Add New Order */,
-				861C001F240EE747004A4F31 /* Home */,
+				861C002C240F0167004A4F31 /* Models */,
+				861C002B240F0145004A4F31 /* Scenes */,
+				861C002A240F0130004A4F31 /* Service */,
 				861C0005240ED7BD004A4F31 /* AppDelegate.swift */,
 				861C0009240ED7BD004A4F31 /* Main.storyboard */,
 				861C000C240ED7BF004A4F31 /* Assets.xcassets */,
 				861C000E240ED7BF004A4F31 /* LaunchScreen.storyboard */,
 				861C0011240ED7BF004A4F31 /* Info.plist */,
-				861C0028240EFA55004A4F31 /* WebService.swift */,
 			);
 			path = Orders;
 			sourceTree = "<group>";
@@ -108,6 +110,31 @@
 				861C0021240EE77D004A4F31 /* NewOrderView.swift */,
 			);
 			path = "Add New Order";
+			sourceTree = "<group>";
+		};
+		861C002A240F0130004A4F31 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				861C0028240EFA55004A4F31 /* WebService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		861C002B240F0145004A4F31 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				861C0020240EE74D004A4F31 /* Add New Order */,
+				861C001F240EE747004A4F31 /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		861C002C240F0167004A4F31 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				861C002D240F0188004A4F31 /* Order.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		861CFFF9240ED7BD004A4F31 = {
@@ -222,6 +249,7 @@
 				861C0006240ED7BD004A4F31 /* AppDelegate.swift in Sources */,
 				861C0022240EE77D004A4F31 /* NewOrderView.swift in Sources */,
 				861C0018240ED850004A4F31 /* HomeViewController.swift in Sources */,
+				861C002E240F0188004A4F31 /* Order.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
