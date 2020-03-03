@@ -26,9 +26,16 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(goToAddNewOrder))
         title = "Orders"
     }
     
+}
+
+extension HomeViewController{
+    @objc func goToAddNewOrder(){
+        print("GoToAddNewOrder")
+    }
 }
 
 extension HomeViewController: UITableViewDelegate{
